@@ -1,0 +1,66 @@
+// start header
+$maincolor:#42adc1;
+$secondcolor:white;
+$thirdcolor: #333;
+$font-size:16px;
+$font-family:"Tajawal", sans-serif;
+
+.header{
+    background-color:$maincolor;
+    height: 50px;
+    width: 100%;
+    z-index: 3;
+
+    .gmail{
+        color: $secondcolor;
+        font-size:$font-size - 1 ;
+        font-weight:600;
+        padding-top: 5%;
+        margin-left: 30%;
+    }
+    .translate{
+        float: right;
+        margin-right:10% ;
+
+    }
+    .btn {
+
+        color:$secondcolor ;
+        font-size:$font-size - 2 ;
+        font-weight:400;
+        margin-top: 10px;
+    }
+    .dropdown-menu{
+
+        background-color:$maincolor ;
+    }
+    .dropdown-item{
+        color: $thirdcolor ;
+    }
+
+    span{
+        
+        margin: 13px;
+    }
+    span a{
+
+        margin: 5px;
+        color: $secondcolor;
+        font-size:$font-size - 2 ;
+        font-weight:400;
+        text-decoration: none;
+        
+    }
+}
+
+@media ( max-width:991px){
+
+    .header{
+
+        height: 100px;
+    }
+}
+
+
+
+

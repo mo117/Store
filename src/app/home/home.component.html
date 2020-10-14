@@ -1,0 +1,44 @@
+<!-- start carousel -->
+<div class="background">
+  <ngb-carousel *ngIf="images ">
+    <ng-template ngbSlide *ngFor='let i of images'>
+      <div class="picsum-img-wrapper">
+        <img src="{{i}}" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<!-- end carousel -->
+
+<!-- start user -->
+<app-users></app-users>
+<!-- end users -->
+
+<!-- start about -->
+<div class="container about">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-12 text-center">
+      <h2>welcome</h2>
+    </div>
+    <div class="col-lg-6 col-md-6 col-12 text-center ">
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada<br> ac turpis egestas. Vestibulum tortor
+        quam
+        feugiat vitae.<br> Contemporary, minimal and modern designs embody the Lavish Alice<br> handwriting, striking a
+        perfect
+        balance between sexy and directional<br> dressing.
+      </p>
+      <button routerLink="/about">read about us</button>
+    </div>
+  </div>
+</div>
+<!-- end about -->
+
+<!-- start product -->
+<app-gallery></app-gallery>
+<!-- end product -->
+
+<!-- start subscribe -->
+<app-subscribe></app-subscribe>
+<!-- end subscribe -->

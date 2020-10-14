@@ -1,0 +1,53 @@
+$maincolor:#42adc1;
+$secondcolor:white;
+$thirdcolor: #333;
+$anothercolor:#444;
+$darkcolor:black;
+$font-size:16px;
+$font-family:"Tajawal", sans-serif;
+
+// start users
+.users{
+    
+    margin-bottom: 5%;
+    margin-left: 15%;
+    .icon{
+        color:$maincolor;
+        font-size:$font-size + 25 ;
+        margin-top: 17%;
+        }
+    .text{
+        margin-top: 18%;
+    }
+    .one{
+
+        line-height: 2em;
+        font-size: $font-size - 2;
+        font-family: $font-family;
+        color: $anothercolor
+    }
+    .two{
+        color:$maincolor ;
+        font-size: $font-size - 4;
+        font-family: $font-family;
+
+    }
+}
+// end users
+
+// responsive
+@media ( max-width:991px){
+
+    .users{
+        margin-left: 31%;
+       
+    }
+    .icon{
+        margin-top: 0;
+    }
+    .text{
+        margin-top: 0;
+    }
+
+}
+

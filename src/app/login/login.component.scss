@@ -1,0 +1,85 @@
+$maincolor:#42adc1;
+$secondcolor:white;
+$thirdcolor: #333;
+$anothercolor:#444;
+$darkcolor:black;
+$danger:red;
+$font-size:16px;
+$font-family:"Tajawal", sans-serif;
+
+
+// start form
+ 
+.form{
+    margin-top:5%;
+    margin-bottom: 5%;
+    h4{
+        text-align: center;
+        color: $maincolor;
+        font-family: $font-family;
+        text-transform: capitalize;
+        margin-bottom: 5%;
+    }
+    .box{
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 50px 0;
+        width: 50%;
+        margin: 0 auto;
+    }
+    label{
+
+        margin : 0 10%;
+        width: 150px;
+        font-size: $font-size - 2;
+        color: $anothercolor;
+
+    }
+    input{
+        width: 70%;
+        height: 48px;
+        background-color: #eeeeee;
+        border: none;
+        border-radius: 30px;
+        padding-left: 5%;
+    }
+    button{
+        background-color: $maincolor;
+        padding: 5px 10px;
+        color:$secondcolor;
+        border: none;
+        margin-top: 4%;
+        margin-bottom: 3%;
+        border-radius: 4px;
+    }
+    span{
+        font-size: $font-size - 2;
+
+    }
+    a{
+        font-size: $font-size - 2;
+        text-decoration: none;
+        transition: all .4s;
+    }
+    a:hover{
+        color: $danger;
+    }
+}
+ 
+// responsive
+
+@media ( max-width:991px){
+
+    .box{
+        width: 90% !important;
+        input{
+
+            width: 80% !important;
+           
+        }
+    
+    }
+}
+

@@ -1,0 +1,70 @@
+$maincolor:#42adc1;
+$secondcolor:white;
+$thirdcolor: #333;
+$anothercolor:#444;
+$darkcolor:black;
+$light:#d5d2d2;
+$font-size:16px;
+$font-family:"Tajawal", sans-serif;
+
+/* start products */
+
+ .search{
+
+    border: 1px solid #D5D5D5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 60% ;
+    
+    span{
+        font-size: $font-size - 3;
+    }
+    input{
+        border: 1px solid $maincolor ;
+        margin-top: 30px;
+        height: 30px;
+        overflow: hidden;
+    }
+    .but{
+        width:30px;
+        background: $maincolor;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        margin-top: 30px;
+        padding: 3px;    
+    }
+}
+
+
+    .gifts{
+        border: 1px solid #D5D5D5;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 30px ;
+            
+    span{
+        font-size: $font-size - 3;
+        
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    li{
+       
+        padding-top: 5%
+    }
+    a{
+        font-size: $font-size - 3 ;
+    }
+}
+
+// responsive
+@media (min-width: 991px) {
+  }
+  
+  
+
+
+

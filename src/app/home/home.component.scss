@@ -1,0 +1,101 @@
+$maincolor:#42adc1;
+$secondcolor:white;
+$thirdcolor: #333;
+$anothercolor:#444;
+$darkcolor:black;
+$font-size:16px;
+$font-family:"Tajawal", sans-serif;
+
+// start carousel
+.background img{
+    width: 100%;
+    height: 400px;
+}
+
+// end carousel
+
+// start users
+.users{
+    
+    margin-bottom: 5%;
+    margin-left: 15%;
+    .icon{
+        color:$maincolor;
+        font-size:$font-size + 25 ;
+        margin-top: 17%;
+        }
+    .text{
+        margin-top: 18%;
+    }
+    .one{
+
+        line-height: 2em;
+        font-size: $font-size - 2;
+        font-family: $font-family;
+        color: $anothercolor
+    }
+    .two{
+        color:$maincolor ;
+        font-size: $font-size - 4;
+        font-family: $font-family;
+
+    }
+}
+// end users
+
+// start about
+
+.about{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    h2{
+        font-family:$font-family ;
+        font-size:$font-size + 20 ;
+        margin-top: 3%;
+        
+    }
+    .text p{
+        font-family:$font-family ;
+        font-size:$font-size - 2 ;
+        color: $anothercolor;
+    }
+    button{
+        height: 50px;
+        width: 150px;
+        border-radius: 30px;
+        color:$secondcolor ;
+        font-size:$font-size - 6;
+        background-color: $maincolor ;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        font-family:$font-family ;
+        text-transform: uppercase;
+    }
+}
+/* responsive */
+
+
+@media ( max-width:991px){
+
+    .users{
+        margin-left: 25%;
+    }
+
+    .about{
+        h2{
+            margin-bottom: 5%;
+            font-size: $font-size + 4;
+            margin-bottom: 2%;
+        }
+        p{
+            font-size: $font-size - 2 ;
+        }
+    }
+    .products{
+        button{
+            margin-bottom: 12%;
+        }
+    }
+}
+

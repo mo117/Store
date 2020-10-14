@@ -1,0 +1,65 @@
+$maincolor:#42adc1;
+$secondcolor:white;
+$thirdcolor: #333;
+$anothercolor:#444;
+$darkcolor:black;
+$font-size:16px;
+$font-family:"Tajawal", sans-serif;
+
+// start box
+.box{
+    background-color: $maincolor;
+    width: 100%;
+    margin-bottom:5%;
+    
+    
+    .all{
+       padding-top: 4%;
+       padding-bottom: 3%; 
+       align-items: center;
+       
+    }
+    p{
+        color: $secondcolor;
+        font-family: $font-family;
+        font-size: $font-size + 3;
+      
+    }
+    input{
+
+        width: 100%;
+        background: 0 0 ;
+        border: none;
+        border-bottom: 1px solid $secondcolor;
+     
+    }
+    ::placeholder{
+        color: $secondcolor;
+        text-transform: capitalize;
+    }
+    button{
+
+        background: $darkcolor;
+        color: $secondcolor;
+        border-radius: 2px;
+        border: none;
+        padding: 13px 25px;
+        font-size: $font-size - 3;
+        text-transform: uppercase;
+
+    }
+}
+
+/* responsive */
+
+@media ( max-width:991px){
+
+    .box{
+        width: 140%;
+        p{
+            font-size: $font-size;
+            font-weight: 400;
+        }
+}
+}
+
