@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ApiService } from '../api.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private ApiService: ApiService) { }
+  constructor(private ApiService: ApiService, private cookies: CookieService) { }
   LogInForm = new FormGroup({
     email: new FormControl('', [
       Validators.required,
@@ -28,6 +29,12 @@ export class LoginComponent implements OnInit {
       this.ApiService.logIn(formData.value).subscribe(
         res => {
           console.log(res);
+          if(res.status == 1) {
+            this.cookies.set("user_token", res.data.token)
+          }
+          else {
+            // res.message
+          }
                   })
     }
     else {
