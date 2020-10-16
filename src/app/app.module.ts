@@ -20,8 +20,17 @@ import { BackgroundComponent } from './background/background.component';
 import { RegesterComponent } from './regester/regester.component';
 import { BoxComponent } from './box/box.component';
 import { ProductCardComponent } from './Shared/product-card/product-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i118/', '.json' );
+}
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -47,7 +56,17 @@ import { ProductCardComponent } from './Shared/product-card/product-card.compone
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-  ],
+    FormsModule,
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
+],
+
   providers: [],
   bootstrap: [AppComponent]
 })

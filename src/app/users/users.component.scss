@@ -8,16 +8,20 @@ $font-family:"Tajawal", sans-serif;
 
 // start users
 .users{
-    
-    margin-bottom: 5%;
-    margin-left: 15%;
+    .div {
+        display: flex;
+    }
+    margin-top: 21px;
+    // margin-left: 15%;
     .icon{
         color:$maincolor;
         font-size:$font-size + 25 ;
-        margin-top: 17%;
+        // margin-top: 17%;
+        margin: 0px 18px;
         }
     .text{
-        margin-top: 18%;
+        // margin-top: 18%;
+        display: grid;
     }
     .one{
 
@@ -34,20 +38,4 @@ $font-family:"Tajawal", sans-serif;
     }
 }
 // end users
-
-// responsive
-@media ( max-width:991px){
-
-    .users{
-        margin-left: 31%;
-       
-    }
-    .icon{
-        margin-top: 0;
-    }
-    .text{
-        margin-top: 0;
-    }
-
-}
 

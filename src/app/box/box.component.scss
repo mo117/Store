@@ -14,14 +14,12 @@ $font-family:"Tajawal", sans-serif;
     border: 1px solid #D5D5D5;
     padding: 10px;
     border-radius: 5px;
-    margin-top: 60% ;
     
     span{
         font-size: $font-size - 3;
     }
     input{
         border: 1px solid $maincolor ;
-        margin-top: 30px;
         height: 30px;
         overflow: hidden;
     }
@@ -31,7 +29,6 @@ $font-family:"Tajawal", sans-serif;
         text-align: center;
         color: white;
         cursor: pointer;
-        margin-top: 30px;
         padding: 3px;    
     }
 }
@@ -45,7 +42,6 @@ $font-family:"Tajawal", sans-serif;
             
     span{
         font-size: $font-size - 3;
-        
     }
     ul{
         list-style: none;
@@ -57,12 +53,10 @@ $font-family:"Tajawal", sans-serif;
     }
     a{
         font-size: $font-size - 3 ;
+        cursor: pointer;
     }
 }
 
-// responsive
-@media (min-width: 991px) {
-  }
   
   
 

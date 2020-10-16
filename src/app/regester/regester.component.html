@@ -6,26 +6,88 @@
 <div class="form">
     <h4>creat new account </h4>
     <div class="container text-center ">
-        <form class="box" action="/action_page_binary.asp" method="post">
-            <label for="fname">phone number </label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="fname">first name</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="fname">laste name </label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="fname">email</label>
-            <input type="email" id="fname" name="fname"><br><br>
-            <label for="fname">passowrd</label>
-            <input type="passowrd" id="fname" name="fname"><br><br>
-            <label for="fname">confirm passowrd</label>
-            <input type="passowrd" id="fname" name="fname"><br><br>
-            <div class="button text-center">
-                <button>creat account</button>
-            </div>   
-            <div class="button text-center">
-                <span>Already Have Account? </span> <a routerLink="/login">log In</a>
-            </div>    
+        <form [formGroup]="LogInForm" (submit)="onSubmit(LogInForm)" class="col-12">
+            <div class="inputWithIcon row">
+                <div class="col-12">
+                    <div class="row" style="justify-content: center">
+                        <label for="email" class="col-3">phone number</label>
+                        <input type="text" formControlName="phone" class="form-control col-9" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="inputWithIcon row">
+                <div class="col-12">
+                    <div class="row" style="justify-content: center">
+                        <label for="email" class="col-3">first name</label>
+                        <input type="text" formControlName="frist_name" class="form-control col-9" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="inputWithIcon row">
+                <div class="col-12">
+                    <div class="row" style="justify-content: center">
+                        <label for="email" class="col-3">laste name</label>
+                        <input type="text" formControlName="last_name" class="form-control col-9" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="inputWithIcon row">
+                <div class="col-12">
+                    <div class="row" style="justify-content: center">
+                        <label for="email" class="col-3">user name</label>
+                        <input type="text" formControlName="username" class="form-control col-9" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="inputWithIcon row">
+                <div class="col-12">
+                    <div class="row" style="justify-content: center">
+                        <label for="email" class="col-3">email</label>
+                        <input type="text" formControlName="email" class="form-control col-9" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="inputWithIcon row">
+                <div class="col-12">
+                    <div class="row" style="justify-content: center">
+                        <label for="password" class="col-3">password
+                        </label>
+                        <input type="password" formControlName="password" class="form-control col-9" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="inputWithIcon row">
+                <div class="col-12">
+                    <div class="row" style="justify-content: center">
+                        <label for="password" class="col-3"> confirm password
+                        </label>
+                        <input type="password" formControlName="password_confirmation" class="form-control col-9" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row FormLink  text-center">
+                <div class="col-12 ">
+                    <button type="submit" class="btn LogInBtn">
+                        create
+                    </button>
+                </div>
+            </div>
+
+            <div class="row FormLink text-center">
+                <p style="width: 100%">
+                    Already Have Account?<a routerLink="/login">log In</a>
+
+                </p>
+            </div>
         </form>
     </div>
-    </div>
+</div>
 <!-- end form -->

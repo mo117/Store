@@ -1,50 +1,40 @@
 <!-- start box -->
 <div class="container">
-<div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 " style=" padding-right: 36px;">
-        
-        <div class="row">
-            <div class="search  row " > 
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 ">
+            <div class="search  row ">
                 <div class="col-12 ">
-                    <span> Search About You Want</span>
+                    <span> {{'Search About You Want' | translate}}</span>
                     <hr>
                 </div>
                 <div class="col-12">
                     <div class="row">
                         <div class="col-10" style="padding: 0px;">
-                            <input style="width:100%">
+                            <input style="width:100%" id="name_product">
                         </div>
 
                         <div class="col-2" style=" padding: 0px;">
-                            <div class="but"> <i class="fas fa-search"></i></div>
+                            <div class="but" (click)="search_products()"> <i class="fas fa-search"></i></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class=" col-lg-12 col-md-12 col-sm-12 gifts "  style="padding-right: 50px;">
-            <div class="row">
+        <div class=" col-lg-12 col-md-12 col-sm-12  ">
+            <div class="row gifts">
                 <div class="col-12 col-md-12 col-sm-12 ">
-                    <span>Categories</span>
+                    <span>{{'CATEGORIES' | translate}}</span>
                     <hr>
                 </div>
-                <div class="col-12 col-md-12 col-sm-12" >
+
+                <div class="col-12 co[l-md-12 col-sm-12">
                     <ul>
-                        <li> <a>All Category</a> </li>
-                        <li><a>shoes</a> </li>
-                        <li> <a>mekuap maybeline</a> </li>
-                        <li> <a>bag</a> </li>
-                        <li> <a>accssseroies</a> </li>
-                        <li><a> brauon</a></li>
-                        <li> <a>Test</a></li>
+                        <li *ngFor="let cat of category" (click)="Gotoproduct(cat.id)"> <a>{{cat.name}}</a> </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 <!-- end box -->

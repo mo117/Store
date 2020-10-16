@@ -6,18 +6,42 @@
 <div class="form">
     <h4>log in </h4>
     <div class="container text-center ">
-        <form class="box" action="/action_page_binary.asp" method="post">
-            <label for="fname">Email </label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="fname">password</label>
-            <input type="password" id="fname" name="fname"><br><br>
-            <div class="button text-center">
-                <button>log in</button>
-            </div>   
-            <div class="button text-center">
-                <span>Don't Have Account?</span> <a routerLink="/Regester">Register Now</a>
-            </div>    
+        <form [formGroup]="LogInForm" (submit)="onSubmit(LogInForm)" class="col-12">
+            <div class="inputWithIcon row">
+                <div class="col-12">
+                    <div class="row" style="justify-content: center">
+                        <label for="email" class="col-3">email</label>
+                        <input type="text" formControlName="email" class="form-control col-9" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="inputWithIcon row">
+                <div class="col-12">
+                    <div class="row" style="justify-content: center">
+                        <label for="password" class="col-3">password
+                        </label>
+                        <input type="password" formControlName="password" class="form-control col-9" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row FormLink  text-center">
+                <div class="col-12 ">
+                    <button type="submit" class="btn LogInBtn">
+                        login
+                    </button>
+                </div>
+            </div>
+
+            <div class="row FormLink text-center">
+                <p style="width: 100%">
+                    Don't have account?<a [routerLink]="['/Regester']">
+                        Register Now</a>
+                </p>
+            </div>
         </form>
     </div>
-    </div>
+</div>
 <!-- end form -->

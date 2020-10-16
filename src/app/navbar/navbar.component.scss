@@ -7,19 +7,14 @@ $font-family:"Tajawal", sans-serif;
 
 .navbar{
  
-    width: 100%;
-    background-color:$secondcolor;
-    .navbar-nav{
+    background-color: $secondcolor;
+    .navbar-collapse{
 
-        text-align: center;
+        justify-content: space-around
     }
 
     .navbar-toggler{
         outline: none;
-    }
-    .navbar-brand{
-        margin: 10px 200px;
-        padding-right: 50px;
     }
     .nav-link{
 
@@ -46,28 +41,3 @@ $font-family:"Tajawal", sans-serif;
 
 /* responsive */
 
-@media ( max-width:991px){
-    .navbar {
-    .navbar-brand{
-        padding-right: 0px;
-        margin: 0px 0px;
-        
-    }
-    .nav-link{
-        margin: 0px 0;
-    }
-    .navbar-nav{
-        text-align: center;
-        padding-right: 0px;
-        background-color: white;
-    }
-}
-
-}
-
-@media (max-width: 400px) {
-    .navbar-brand{
-       width: 74%;
-    }
-}
-/* end navbar */

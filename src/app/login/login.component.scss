@@ -20,15 +20,6 @@ $font-family:"Tajawal", sans-serif;
         text-transform: capitalize;
         margin-bottom: 5%;
     }
-    .box{
-        border: 1px solid rgba(0, 0, 0, 0.125);
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 50px 0;
-        width: 50%;
-        margin: 0 auto;
-    }
     label{
 
         margin : 0 10%;
@@ -68,18 +59,3 @@ $font-family:"Tajawal", sans-serif;
     }
 }
  
-// responsive
-
-@media ( max-width:991px){
-
-    .box{
-        width: 90% !important;
-        input{
-
-            width: 80% !important;
-           
-        }
-    
-    }
-}
-

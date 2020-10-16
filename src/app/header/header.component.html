@@ -1,5 +1,5 @@
 <!-- start header -->
-<div class="header">
+<div class="header contanir">
     <div class="row text-center">
         <div class="col-xl-3 col-lg-3 col-md-6 col-10">
             <div class="gmail">
@@ -16,12 +16,12 @@
                             english
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">العربيه</a>
-                            <a class="dropdown-item" href="#">English</a>
+                            <a class="dropdown-item"  (click)="changeLang('ar')" *ngIf="IsArbic">العربيه</a>
+                            <a class="dropdown-item" (click)="changeLang('en')" *ngIf="IsEnglish">English</a>
                         </div>
                     </div>
-                  <span><a routerLink="/login">log In</a></span>  
-                  <span><a routerLink="/Regester">Regester</a></span>  
+                  <span><a routerLink="/login">{{'log In' | translate}} </a></span>  
+                  <span><a routerLink="/Regester">{{'Regester' | translate}} </a></span>  
                 </div>
             </div>
         </div>

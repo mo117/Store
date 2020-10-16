@@ -20,31 +20,21 @@ $font-family:"Tajawal", sans-serif;
         text-transform: capitalize;
         margin-bottom: 5%;
     }
-    .box{
-        border: 1px solid rgba(0, 0, 0, 0.125);
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 50px 0;
-        width: 50%;
-        margin: 0 auto;
-    }
     label{
 
         margin : 0 10%;
-        width: 150px;
+        padding-bottom: 1%;
+        padding-top: 1%;
         font-size: $font-size - 2;
         color: $anothercolor;
 
     }
     input{
-        width: 70%;
         height: 48px;
         background-color: #eeeeee;
         border: none;
         border-radius: 30px;
         padding-left: 5%;
-        
     }
     button{
         background-color: $maincolor;
@@ -63,23 +53,9 @@ $font-family:"Tajawal", sans-serif;
         font-size: $font-size - 2;
         text-decoration: none;
         transition: all .4s;
+        cursor: pointer;
     }
     a:hover{
         color: $danger;
     }
 }
- 
-// responsive
-
-@media ( max-width:991px){
-
-    .box{
-        width: 90% !important;
-        input{
-
-            width: 80% !important;
-           
-        }
-    }
-}
-

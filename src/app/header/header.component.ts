@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  IsArbic: boolean;
+  IsEnglish: boolean;
 
-  constructor() { }
+  constructor(private translateService: TranslateService) { 
+    this.IsArbic = true;
+    this.IsEnglish = false;
+  }
 
   ngOnInit(): void {
+  }
+  changeLang(lang: string) {
+    if (lang == 'ar') {
+      this.IsArbic = false;
+      this.IsEnglish = true;
+    }
+    else {
+      this.IsArbic = true;
+      this.IsEnglish = false;
+    }
+    this.translateService.use(lang);
+    this.translateService.setDefaultLang(lang);
   }
 
 }

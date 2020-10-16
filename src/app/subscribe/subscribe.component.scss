@@ -9,7 +9,6 @@ $font-family:"Tajawal", sans-serif;
 // start box
 .box{
     background-color: $maincolor;
-    width: 100%;
     margin-bottom:5%;
     
     
@@ -26,7 +25,7 @@ $font-family:"Tajawal", sans-serif;
       
     }
     input{
-
+        margin-top: 15px;
         width: 100%;
         background: 0 0 ;
         border: none;
@@ -38,7 +37,7 @@ $font-family:"Tajawal", sans-serif;
         text-transform: capitalize;
     }
     button{
-
+        margin-top: 10px;
         background: $darkcolor;
         color: $secondcolor;
         border-radius: 2px;
@@ -51,15 +50,24 @@ $font-family:"Tajawal", sans-serif;
 }
 
 /* responsive */
-
+.text {
+    padding-left: 18%;
+}
 @media ( max-width:991px){
 
     .box{
-        width: 140%;
+        // width: 140%;
         p{
             font-size: $font-size;
             font-weight: 400;
         }
 }
+.text {
+    padding-left: 0%;
 }
+.email {
+    width: 66%;
+}
+}
+
 
