@@ -22,10 +22,16 @@ import { BoxComponent } from './box/box.component';
 import { ProductCardComponent } from './Shared/product-card/product-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { DetailsComponent } from './details/details.component';
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i118/', '.json' );
+  return new TranslateHttpLoader(http, './assets/i118/', '.json');
 }
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -50,6 +56,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     RegesterComponent,
     BoxComponent,
     ProductCardComponent,
+    ProductdetailsComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,12 +68,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     TranslateModule.forRoot({
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
       }
-  })
-],
+    }),
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(),
+  ],
 
   providers: [],
   bootstrap: [AppComponent]

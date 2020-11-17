@@ -10,11 +10,12 @@ import { isNgTemplate } from '@angular/compiler';
 })
 export class ApiService {
   baseurl = environment.baseUrl;
-  constructor(private http: HttpClient,private cookieService: CookieService) { }
+  constructor(private http: HttpClient, private cookieService: CookieService) { }
   httpOptions = {
     headers: new HttpHeaders({
-      lang: this.cookieService.get("lang"),
-   }),
+      'x-rapidapi-key': 'NDMwYTZqMmx2NGFob2I2OHI5bnEwcGlxa3I6MXU3MzNhbnBrcnBsMTM1Z3Q5b2ttcXQya2twM2M2OHNwaDQ3amY4MWluaTZ2bWRocm9nbQ==',
+      'Authorization ': 'Bearer NDMwYTZqMmx2NGFob2I2OHI5bnEwcGlxa3I6MXU3MzNhbnBrcnBsMTM1Z3Q5b2ttcXQya2twM2M2OHNwaDQ3amY4MWluaTZ2bWRocm9nbQ==',
+    }),
   };
 
   logIn(fromData): Observable<any> {
@@ -25,7 +26,7 @@ export class ApiService {
     return this.http.post(this.baseurl + 'Auth_general/login', fromValue, this.httpOptions)
   }
 
-  regester(fromData):Observable<any>{
+  regester(fromData): Observable<any> {
     const fromValue = new FormData();
     fromValue.append("email", fromData.email);
     fromValue.append("password", fromData.password);
@@ -47,17 +48,31 @@ export class ApiService {
   }
 
   home_item(): Observable<any> {
-    return this.http.get(this.baseurl + 'Home/homeWebsite' , this.httpOptions)
+    return this.http.get(this.baseurl + 'Home/homeWebsite', this.httpOptions)
   }
 
   products_item(cat_id, level_id): Observable<any> {
-    return this.http.get(this.baseurl + 'Product/products_level?level=' + level_id + '&cat_id=' + cat_id , this.httpOptions)
+    return this.http.get(this.baseurl + 'Product/products_level?level=' + level_id + '&cat_id=' + cat_id, this.httpOptions)
   }
 
   serch_item(name, cat_id, type): Observable<any> {
-    return this.http.get(this.baseurl + 'Home/search_by_name?name=' + name +'&cat_id='+ cat_id +'&type=' + type , this.httpOptions)
+    return this.http.get(this.baseurl + 'Home/search_by_name?name=' + name + '&cat_id=' + cat_id + '&type=' + type, this.httpOptions)
   }
 
+  add_to_cart(id): Observable<any> {
+    const fromValue = new FormData();
+    fromValue.append("quantity", "1");
+    fromValue.append("color_id", null);
+    fromValue.append("size_id", null);
+    return this.http.post(this.baseurl + 'Product/add_to_cart/' + id, fromValue,this.httpOptions)
+  }
 
-  
+  add_to_fav(id): Observable<any> {
+    return this.http.post(this.baseurl + 'Product/wishlist/' + id, "", this.httpOptions)
+  }
+
+  allData(): Observable<any> {
+    return this.http.get('https://elenasport-io1.p.rapidapi.com/v2/countries', this.httpOptions)
+  }
+
 }

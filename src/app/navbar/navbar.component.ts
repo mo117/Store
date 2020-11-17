@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.get_category();
+    this.get_Data();
   }
   NavClick() {
     let element = document.querySelector('.show');
@@ -27,6 +28,13 @@ export class NavbarComponent implements OnInit {
      console.log(this.category);
    });
   }
+  //
+
+  get_Data() {
+    this.ApiService.allData().subscribe((res) => {
+       console.log(res.data);
+    });
+   }
   Gotoproduct(id) {
     console.log(id);
     
